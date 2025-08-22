@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Zenius Education</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .navbar-dark .navbar-nav .nav-link.active, 
+        .navbar-dark .navbar-nav .nav-link:hover {
+            color: #ffc107;
+            text-decoration: underline;
+        }
+        .nav-trial {
+            font-size: 0.6rem;
+            background: #dc3545;
+            padding: 0 5px;
+            border-radius: 10px;
+            font-weight: 600;
+            margin-left: 2px;
+            color: white;
+            vertical-align: super;
+            user-select: none;
+        }
+        .btn-yellow {
+            background-color: #ffc107;
+            border: none;
+            color: #121212;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+        }
+        .btn-yellow:hover, .btn-yellow:focus {
+            background-color: #e0a800;
+            color: #121212;
+        }
+        .btn-outline-yellow {
+            border-color: #ffc107;
+            color: #ffc107;
+            font-weight: 600;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .btn-outline-yellow:hover, .btn-outline-yellow:focus {
+            background-color: #ffc107;
+            color: #121212;
+        }
+        .carousel-caption {
+            bottom: 20px;
+            left: 20px;
+            right: auto;
+            text-align: left;
+            font-size: 0.85rem;
+            background: rgba(0,0,0,0.5);
+            padding: 5px 10px;
+            border-radius: 5px;
+            user-select: none;
+        }
+        .carousel-item img {
+            border-radius: 10px;
+            object-fit: cover;
+            max-height: 400px;
+            width: 100%;
+        }
+        .menu-second-level {
+            font-size: 0.875rem;
+            letter-spacing: 0.03rem;
+        }
+
+        .form-check.form-switch .form-check-input {
+            background-color: #6c757d;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+        .form-check.form-switch .form-check-input:checked {
+            background-color: #ffc107;
+            border-color: #ffc107;
+        }
+        .form-check.form-switch .form-check-input:focus {
+            box-shadow: 0 0 0 0.25rem rgb(255 193 7 / 0.5);
+        }
+
+        .chat-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ffc107;
+            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: none;
+        }
+        .chat-button svg {
+            fill: #121212;
+            width: 28px;
+            height: 28px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color:#121212;">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+      <img src="zenius-logo-dark.webp" alt="Zenius Logo" style="height: 40px;">
+      </div>
+      <div class="d-flex flex-column lh-1">
+      </div>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" 
+        aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-3">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center" href="#">
+            Zencore<span class="nav-trial">Trial</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Try Out</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Blog</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav align-items-center gap-2 gap-lg-3">
+        <li class="nav-item d-none d-md-block">
+          <a class="nav-link" href="#" title="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white" viewBox="0 0 24 24"><path d="M21.53 20.47l-5.82-5.83a7 7 0 1 0-1.06 1.06l5.83 5.83a.75.75 0 1 0 1.05-1.06zM10.5 16a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z"/></svg>
+          </a>
+        </li>
+        <li class="nav-item d-flex align-items-center">
+          <div class="form-check form-switch m-0">
+            <input class="form-check-input" type="checkbox" role="switch" id="darkModeSwitch" aria-label="Dark Mode Toggle" />
+          </div>
+        </li>
+        <li class="nav-item d-none d-lg-block">
+          <button class="btn btn-primary px-3">Beli Paket</button>
+        </li>
+        <li class="nav-item d-none d-lg-block">
+          <a class="nav-link" href="#">Login</a>
+        </li>
+        <li class="nav-item d-none d-lg-block">
+          <button class="btn btn-yellow px-3">Sign Up</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg navbar-dark second-navbar py-2">
+  <div class="container-fluid px-4 justify-content-center">
+    <ul class="navbar-nav menu-second-level gap-3">
+      <li><a href="#" class="nav-link p-0 text-white">SD</a></li>
+      <li><a href="#" class="nav-link p-0 text-white">SMP</a></li>
+      <li><a href="#" class="nav-link p-0 text-white">SMA</a></li>
+      <li><a href="#" class="nav-link p-0 text-white">Basic Skills</a></li>
+      <li><a href="#" class="nav-link p-0 text-white">UTBK</a></li>
+      <li><a href="#" class="nav-link p-0 text-white">TKA SMA</a></li>
+      <li><a href="#" class="nav-link p-0 text-white">Ujian Mandiri</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="container my-5">
+  <div class="row align-items-center gy-4">
+    <div class="col-lg-6">
+      <h1 class="display-4 fw-bold lh-1">Bikin cerdas beneran deh pokoknya.</h1>
+      <p class="lead mt-3">
+        Gak cuma bantu berprestasi & lolos PTN, tapi juga ngajarin cara mikir yang bener. Biar cerdasnya gak cuma buat ujian, tapi kepake seumur hidup! Gas belajar sekarang!
+      </p>
+      <div class="mt-4 d-flex gap-3 flex-wrap">
+        <button class="btn btn-yellow btn-lg">Daftar gratis!</button>
+        <button class="btn btn-outline-yellow btn-lg">Lihat Semua Materi</button>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="Zenius 1.webp" 7
+                 class="d-block w-100" alt="Grup murid Zenius menggunakan jas almamater berdiri di depan gedung kampus UNPAD" onerror="this.onerror=null;this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/efbfc287-c03f-4d6a-a019-6e9f1b02da3b.png';"/>
+            <div class="carousel-caption d-none d-md-block">
+              <small>📷 Murid Zenius yang masuk ITB</small>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="Zenius 2.webp" 
+                 class="d-block w-100" alt="Suasana pelajaran online di Zenius dengan pengajar dan siswa tampak serius di layar komputer" onerror="this.onerror=null;this.src='https://placehold.co/800x400/png?text=Image+Not+Available';"/>
+            <div class="carousel-caption d-none d-md-block">
+              <small>📷 Murid Zenius yang masuk UI</small>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="zenius 3.webp" 
+                 class="d-block w-100" alt="Pengajar Zenius sedang memberikan materi pelajaran secara online menggunakan papan tulis digital" onerror="this.onerror=null;this.src='https://placehold.co/800x400/png?text=Image+Not+Available';"/>
+            <div class="carousel-caption d-none d-md-block">
+              <small>📷 Murid Zenius yang masuk UGM</small>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        <div class="carousel-indicators mt-3 justify-content-center">
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
+
+</body>
+</html>
